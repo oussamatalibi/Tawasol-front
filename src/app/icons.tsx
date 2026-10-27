@@ -14,6 +14,11 @@ const paths: Record<string, ReactNode> = {
   refresh: <><path d="M20 11a8 8 0 0 0-14.5-4M4 4v4h4M4 13a8 8 0 0 0 14.5 4M20 20v-4h-4" /></>,
   medal: <><circle cx="12" cy="15" r="5" /><path d="m8.5 10.5-2-7h4l1.5 4M15.5 10.5l2-7h-4L12 7.5" /></>,
   king: <><path d="M12 2v5M9.5 4.5h5M8 21h8M7 18h10l-1.5-7a3.5 3.5 0 1 0-7 0L7 18Z" /></>,
+  clock: <><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></>,
+  mail: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></>,
+  grid: <><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></>,
+  chevron: <><path d="m9 6 6 6-6 6" /></>,
+  bell: <><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4l2-2Z" /><path d="M10 21h4" /></>,
 };
 
 export function Icon({ name }: { name: string }) {
