@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export type Language = "fr" | "ar";
-type SitePage = "home" | "about";
+type SitePage = "home" | "about" | "players";
 
 const labels = {
   fr: {
@@ -16,6 +16,7 @@ const labels = {
     about: "Le club",
     events: "Tournois",
     articles: "Articles",
+    players: "Joueurs",
     academy: "Formation",
     contact: "Contact",
     language: "العربية",
@@ -51,6 +52,7 @@ const labels = {
     about: "النادي",
     events: "البطولات",
     articles: "المقالات",
+    players: "اللاعبون",
     academy: "التدريب",
     contact: "اتصل بنا",
     language: "Français",
@@ -88,6 +90,7 @@ function getNavigationLinks(currentPage: SitePage) {
     about: "/about",
     events: homePage ? "#events" : "/#events",
     articles: homePage ? "#articles" : "/#articles",
+    players: "/players",
     academy: homePage ? "#membership" : "/#membership",
     contact: homePage ? "#contact" : "/#contact",
   };
@@ -162,6 +165,13 @@ export function SiteHeader({
         </Link>
         <Link href={links.events} onClick={() => setMobileMenuOpen(false)}>{text.events}</Link>
         <Link href={links.articles} onClick={() => setMobileMenuOpen(false)}>{text.articles}</Link>
+        <Link
+          href={links.players}
+          aria-current={currentPage === "players" ? "page" : undefined}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {text.players}
+        </Link>
         <Link href={links.academy} onClick={() => setMobileMenuOpen(false)}>{text.academy}</Link>
         <Link href={links.contact} onClick={() => setMobileMenuOpen(false)}>{text.contact}</Link>
       </nav>
@@ -257,6 +267,7 @@ export function SiteFooter({ language }: { language: Language }) {
           <Link href={links.about}>{text.about}</Link>
           <Link href={links.events}>{text.events}</Link>
           <Link href={links.articles}>{text.articles}</Link>
+          <Link href={links.players}>{text.players}</Link>
           <Link href={links.academy}>{text.academy}</Link>
           <Link href={links.contact}>{text.contact}</Link>
         </nav>
