@@ -28,6 +28,8 @@ const paths: Record<string, ReactNode> = {
   puzzle: <><rect x="4" y="4" width="16" height="16" rx="2" /><path d="M4 12h16M12 4v16" /></>,
   lesson: <><rect x="3" y="4" width="18" height="14" rx="2" /><path d="m10 8.5 5 3-5 3v-6Z" /><path d="M8 21h8" /></>,
   pawn: <><circle cx="12" cy="6" r="3" /><path d="M9 21h6m-5-3h4l-1-6h-2l-1 6Z" /></>,
+  bolt: <><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" /></>,
+  list: <><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01" /></>,
 };
 
 export function Icon({ name }: { name: string }) {
