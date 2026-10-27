@@ -553,7 +553,7 @@ export default function EventsPage() {
               <div>
                 <h2 id="events-organize-title">{text.organizeTitle}</h2>
                 <p>{text.organizeText}</p>
-                <Link className="events-organize__button" href="/#contact">{text.contact}<b aria-hidden="true">{arrow}</b></Link>
+                <Link className="events-organize__button" href="/contact">{text.contact}<b aria-hidden="true">{arrow}</b></Link>
               </div>
             </section>
           </aside>
