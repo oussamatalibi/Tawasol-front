@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 export type Language = "fr" | "ar";
-type SitePage = "home" | "about" | "players" | "articles";
+type SitePage = "home" | "about" | "players" | "articles" | "formation";
 
 const labels = {
   fr: {
@@ -91,7 +91,7 @@ function getNavigationLinks(currentPage: SitePage) {
     events: homePage ? "#events" : "/#events",
     articles: "/articles",
     players: "/players",
-    academy: homePage ? "#membership" : "/#membership",
+    academy: "/formation",
     contact: homePage ? "#contact" : "/#contact",
   };
 }
@@ -178,7 +178,13 @@ export function SiteHeader({
         >
           {text.players}
         </Link>
-        <Link href={links.academy} onClick={() => setMobileMenuOpen(false)}>{text.academy}</Link>
+        <Link
+          href={links.academy}
+          aria-current={currentPage === "formation" ? "page" : undefined}
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          {text.academy}
+        </Link>
         <Link href={links.contact} onClick={() => setMobileMenuOpen(false)}>{text.contact}</Link>
       </nav>
 
