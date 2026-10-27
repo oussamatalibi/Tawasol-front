@@ -6106,6 +6106,10 @@ a:focus-visible {
     grid-template-rows: none;
   }
 
+  .contact-side .contact-quick {
+    align-self: start;
+  }
+
   .contact-grid--lower .contact-join {
     grid-column: 1 / -1;
   }
